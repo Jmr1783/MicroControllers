@@ -1,0 +1,132 @@
+TMR0IE - TMR0 overflow interrupt enable
+INT0IE: INT0 External Interrupt Enable bit
+RBIE: RB Port Change Interrupt Enable bit
+TMR0IF: TMR0 Overflow Interrupt Flag bit
+INT0IF: INT0 External Interrupt Flag bit
+RBIF: RB Port Change Interrupt Flag bit
+RBPU: PORTB Pull-up Enable bit
+INTEDG0: External Interrupt 0 Edge Select bit
+INTEDG1: External Interrupt 1 Edge Select bit
+INTEDG2: External Interrupt 2 Edge Select bit
+INTEDG3: External Interrupt 3 Edge Select bit
+TMR0IP: TMR0 Overflow Interrupt Priority bit
+INT3IP: INT3 External Interrupt Priority bit
+RBIP: RB Port Change Interrupt Priority bit
+INT2IP: INT2 External Interrupt Priority bit
+INT1IP: INT1 External Interrupt Priority bit
+INT3IE: INT3 External Interrupt Enable bit
+INT2IE: INT2 External Interrupt Enable bit
+INT1IE: INT1 External Interrupt Enable bit
+INT3IF: INT3 External Interrupt Flag bit
+INT2IF: INT2 External Interrupt Flag bit
+INT1IF: INT1 External Interrupt Flag bit
+PSPIF: Parallel Slave Port Read/Write Interrupt Flag bit
+ADIF: A/D Converter Interrupt Flag bit
+RC1IF: EUSARTx Receive Interrupt Flag bit
+TX1IF: EUSARTx Transmit Interrupt Flag bit
+SSPIF: Master Synchronous Serial Port Interrupt Flag bit
+TMR1GIF: Timer1 Gate Interrupt Flag bit
+TMR2IF: TMR2 to PR2 Match Interrupt Flag bit
+TMR1IF: TMR1 Overflow Interrupt Flag bit
+OSCFIF: Oscillator Fail Interrupt Flag bit
+BCLIF: Bus Collision Interrupt Flag bit
+HLVDIF: High/Low-Voltage Detect Interrupt Flag bit
+TMR3IF: TMR3 Overflow Interrupt Flag bit
+TMR3GIF: TMR3 Gate Interrupt Flag bit
+RC2IF: EUSARTx Receive Interrupt Flag bit
+TX2IF: EUSARTx Transmit Interrupt Flag bit
+CTMUIF: CTMU Interrupt Flag bit
+CCP2IF: CCP2 Interrupt Flag bit
+CCP1IF: ECCP1 Interrupt Flag bit
+TMR4IF: TMR4 Overflow Interrupt Flag bit
+EEIF: Data EEDATA/Flash Write Operation Interrupt Flag bit
+CMP2IF: CMP2 Interrupt Flag bit
+CMP1IF: CMP1 Interrupt Flag bit
+CCP5IF: CCP5 Interrupt Flag bit
+CCP4IF: CCP4 Interrupt Flag bit
+CCP3IF: CCP3 Interrupt Flag bit
+IRXIF: Invalid Message Received Interrupt Flag bits
+WAKIF: Bus Wake-up Activity Interrupt Flag bit
+ERRIF: Error Interrupt Flag bit (Multiple sources in COMSTAT register)
+TXB2IF: Transmit Buffer 2 Interrupt Flag bit
+TXB1IF: Transmit Buffer 1 Interrupt Flag bit
+TXB0IF: Transmit Buffer 0 Interrupt Flag bit
+RXB1IF: Receive Buffer 1 Interrupt Flag bit
+RXB0IF: Receive Buffer 0 Interrupt Flag bit //this and FIFOFIF are from the same bit
+FIFOFIF: FIFO Full Interrupt Flag bit       //depends on mode
+PSPIE: Parallel Slave Port Read/Write Interrupt Enable bit
+ADIE: A/D Converter Interrupt Enable bit
+RC1IE: EUSARTx Receive Interrupt Enable bit
+TX1IE: EUSARTx Transmit Interrupt Enable bit
+SSPIE: Master Synchronous Serial Port Interrupt Enable bit
+TMR1GIE: TMR1 Gate Interrupt Enable bit
+TMR2IE: TMR2 to PR2 Match Interrupt Enable bit
+TMR1IE: TMR1 Overflow Interrupt Enable bit
+OSCFIE: Oscillator Fail Interrupt Enable bit
+BCLIE: Bus Collision Interrupt Enable bit
+HLVDIE: High/Low-Voltage Detect Interrupt Enable bit
+TMR3IE: TMR3 Overflow Interrupt Enable bit
+TMR3GIE: Timer3 Gate Interrupt Enable bit
+RC2IE: EUSARTx Receive Interrupt Enable bit
+TX2IE: EUSARTx Transmit Interrupt Enable bit
+CTMUIE: CTMU Interrupt Enable bit
+CCP2IE: CCP2 Interrupt Enable bit
+CCP1IE: ECCP1 Interrupt Enable bit
+TMR4IE: TMR4 Overflow Interrupt Flag bit
+EEIE: Data EEDATA/Flash Write Operation Interrupt Flag bit
+CMP2IE: CMP2 Interrupt Flag bit
+CMP1IE: CMP1 Interrupt Flag bit
+CCP5IE: CCP5 Interrupt Flag bit
+CCP4IE: CCP4 Interrupt Flag bit
+CCP3IE: CCP3 Interrupt Flag bits
+IRXIE: Invalid Message Received Interrupt Flag bit
+WAKIE: Bus Wake-up Activity Interrupt Flag bit
+ERRIE: Error Interrupt Flag bit (multiple sources in the COMSTAT register)
+TXB2IE: Transmit Buffer 2 Interrupt Flag bit
+TXB1IE: Transmit Buffer 1 Interrupt Flag bit
+TXB0IE: Transmit Buffer 0 Interrupt Flag bit
+RXB1IE: Receive Buffer 1 Interrupt Flag bit
+RXB0IE: Receive Buffer 0 Interrupt Flag bit
+PSPIP: Parallel Slave Port Read/Write Interrupt Priority bit
+ADIP: A/D Converter Interrupt Priority bit
+RC1IP: EUSARTx Receive Interrupt Priority bit
+TX1IP: EUSARTx Transmit Interrupt Priority bit
+SSPIP: Master Synchronous Serial Port Interrupt Priority bit
+TMR1GIP: Timer1 Gate Interrupt Priority bit
+TMR2IP: TMR2 to PR2 Match Interrupt Priority bit
+TMR1IP: TMR1 Overflow Interrupt Priority bit
+OSCFIP: Oscillator Fail Interrupt Priority bit
+BCLIP: Bus Collision Interrupt Priority bit
+HLVDIP: High/Low-Voltage Detect Interrupt Priority bit
+TMR3IP: TMR3 Overflow Interrupt Priority bit
+TMR3GIP: TMR3 Gate Interrupt Priority bit
+RC2IP: EUSARTx Receive Priority Flag bit
+TX2IP: EUSARTx Transmit Interrupt Priority bit
+CTMUIP: CTMU Interrupt Priority bit
+CCP2IP: CCP2 Interrupt Priority bit
+CCP1IP: ECCP1 Interrupt Priority bit
+TMR4IP: TMR4 Overflow Interrupt Priority bit
+EEIP: EE Interrupt Priority bit
+CMP2IP: CMP2 Interrupt Priority bit
+CMP1IP: CMP1 Interrupt Priority bit
+CCP5IP: CCP5 Interrupt Priority bit
+CCP4IP: CCP4 Interrupt Priority bit
+CCP3IP: CCP3 Interrupt Priority bits
+IRXIP: Invalid Message Received Interrupt Priority bits
+WAKIP: Bus Wake-up Activity Interrupt Priority bit
+ERRIP: CAN Bus Error Interrupt Priority bit
+TXB2IP: Transmit Buffer 2 Interrupt Priority bit
+TXB1IP: Transmit Buffer 1 Interrupt Priority bit
+TXB0IP: Transmit Buffer 0 Interrupt Priority bit
+RXB1IP: Receive Buffer 1 Interrupt Priority bitRXB0IP/FIFOFIP: Receive Buffer 0 Interrupt Priority bit
+IPEN: Interrupt Priority Enable bit
+SBOREN: Software BOR Enable bit
+CM: Configuration Mismatch Flag bit
+RI: RESET Instruction Flag bit
+TO: Watchdog Timer Time-out Flag bit
+PD: Power-Down Detection Flag bit
+POR: Power-on Reset Status bit
+BOR: Brown-out Reset Status bit
+IOCB<7:4>: Interrupt-on-Change PORTB Control bits
+
+page 169: summary of registers chart

@@ -1,0 +1,268 @@
+/*
+ * File:   MC_interrupts.h
+ * Author: Jacob
+ *
+ * Created on April 10, 2017, 8:22 PM
+ */
+
+#ifndef MC_INTERRUPTS_H
+#define	MC_INTERRUPTS_H
+
+typedef enum mc_interrupt_calls_E {
+
+
+    MC_INTCON_RBIF,
+    MC_INTCON_INT0IF,
+    MC_INTCON_TMR0IF,
+    MC_INTCON_RBIE,
+    MC_INTCON_INT0IE,
+    MC_INTCON_TMR0IE,
+    MC_INTCON_PEIE,
+    MC_INTCON_GIEL,
+    MC_INTCON_GIE,
+    MC_INTCON_GIEH,
+
+    MC_INTCON2_RBIP,
+    MC_INTCON2_INT3IP,
+    MC_INTCON2_TMR0IP,
+    MC_INTCON2_INTEDG3,
+    MC_INTCON2_INTEDG2,
+    MC_INTCON2_INTEDG1,
+    MC_INTCON2_INTEDG0,
+    MC_INTCON2_NOT_RBPU,
+
+
+    MC_INTCON3_INT1IF,
+    MC_INTCON3_INT2IF,
+    MC_INTCON3_INT3IF,
+    MC_INTCON3_INT1IE,
+    MC_INTCON3_INT2IE,
+    MC_INTCON3_INT3IE,
+    MC_INTCON3_INT1IP,
+    MC_INTCON3_INT2IP,
+
+    MC_PIR1,
+    MC_PIR2,
+    MC_PIR3,
+    MC_PIR4,
+    MC_PIR5,
+
+    MC_PIE1_TMR1IE,
+	MC_PIE1_TMR2IE,
+	MC_PIE1_TMR1GIE,
+	MC_PIE1_SSPIE,
+	MC_PIE1_TX1IE,
+	MC_PIE1_RC1IE,
+	MC_PIE1_ADIE,
+	MC_PIE1_PSPIE,
+
+    MC_PIE2_TMR3GIE,
+	MC_PIE2_TMR3IE,
+	MC_PIE2_HLVDIE,
+	MC_PIE2_BCLIE,
+//	MC_PIE2_NOT_USED,
+//	MC_PIE2_NOT_USED,
+//	MC_PIE2_NOT_USED,
+	MC_PIE2_OSCFIE,
+
+//	MC_PIE3_NOT_USED,
+	MC_PIE3_CCP1IE,
+	MC_PIE3_CCP2IE,
+	MC_PIE3_CTMUIE,
+	MC_PIE3_TX2IE,
+	MC_PIE3_RC2IE,
+//	MC_PIE3_NOT_USED,
+//	MC_PIE3_NOT_USED,
+
+	MC_PIE4_CCP3IE,
+	MC_PIE4_CCP4IE,
+	MC_PIE4_CCP5IE,
+//	MC_PIE4_NOT_USED,
+	MC_PIE4_CMP1IE,
+	MC_PIE4_CCP2IE,
+	MC_PIE4_EEIE,
+	MC_PIE4_TMR4IE,
+
+	MC_PIE5_RXB0IE,
+	MC_PIE5_RXB1IE,
+	MC_PIE5_TXB0IE,
+	MC_PIE5_TXB1IE,
+	MC_PIE5_TXB2IE,
+	MC_PIE5_ERRIE,
+	MC_PIE5_WAKIE,
+	MC_PIE5_IRXIE,
+
+    MC_IPR1_TMR1IP,
+	MC_IPR1_TMR2IP,
+	MC_IPR1_TMR1GIP,
+	MC_IPR1_SSPIP,
+	MC_IPR1_TX1IP,
+	MC_IPR1_RC1IP,
+	MC_IPR1_ADIP,
+	MC_IPR1_PSPIP,
+
+	MC_IPR2_TMR3GIP,
+	MC_IPR2_TMR3IP,
+	MC_IPR2_HLVDIP,
+	MC_IPR2_BCLIP,
+//	MC_IPR2_NOT_USED,
+//	MC_IPR2_NOT_USED,
+//	MC_IPR2_NOT_USED,
+	MC_IPR2_OSCFIP,
+
+//	MC_IPR3_NOT_USED,
+	MC_IPR3_CCP1IP,
+	MC_IPR3_CCP2IP,
+	MC_IPR3_CTMUIP,
+	MC_IPR3_TX2IP,
+	MC_IPR3_RC2IP,
+//	MC_IPR3_NOT_USED,
+//	MC_IPR3_NOT_USED,
+
+	MC_IPR4_CCP3IP,
+	MC_IPR4_CCP4IP,
+	MC_IPR4_CCP5IP,
+	MC_IPR4_,
+	MC_IPR4_CMP1IP,
+	MC_IPR4_CMP2IP,
+	MC_IPR4_EEIP,
+	MC_IPR4_TMR4IP,
+
+	MC_IPR5_RXB0IP,
+	MC_IPR5_RXB1IP,
+	MC_IPR5_TXB0IP,
+	MC_IPR5_TXB1IP,
+	MC_IPR5_TXB2IP,
+	MC_IPR5_ERRIP,
+	MC_IPR5_WAKIP,
+	MC_IPR5_IRXIP,
+
+	MC_RCON_NOT_BOR,
+	MC_RCON_NOT_POR,
+	MC_RCON_NOT_PD,
+	MC_RCON_NOT_TO,
+	MC_RCON_NOT_RI,
+	MC_RCON_NOT_CM,
+	MC_RCON_SBOREN,
+	MC_RCON_IPEN,
+
+} mc_interrupt_calls_E;
+
+//Enums...
+
+//---------------------------------------------
+// Function to enable registers. It will take enums and then use case statements to determine which bits to set.
+//-----------------------------------------------
+#endif	/* MC_INTERRUPTS_H */
+
+	
+	
+	
+	
+	
+	case (MC_INTCON_RBIF):
+    case (MC_INTCON_INT0IF):
+    case (MC_INTCON_TMR0IF):
+    case (MC_INTCON_RBIE):
+    case (MC_INTCON_INT0IE):
+    case (MC_INTCON_TMR0IE):
+    case (MC_INTCON_PEIE):
+    case (MC_INTCON_GIEL):
+    case (MC_INTCON_GIE):
+    case (MC_INTCON_GIEH):
+    case (MC_INTCON2_RBIP):
+    case (MC_INTCON2_INT3IP):
+    case (MC_INTCON2_TMR0IP):
+    case (MC_INTCON2_INTEDG3):
+    case (MC_INTCON2_INTEDG2):
+    case (MC_INTCON2_INTEDG1):
+    case (MC_INTCON2_INTEDG0):
+    case (MC_INTCON2_NOT_RBPU):
+    case (MC_INTCON3_INT1IF):
+    case (MC_INTCON3_INT2IF):
+    case (MC_INTCON3_INT3IF):
+    case (MC_INTCON3_INT1IE):
+    case (MC_INTCON3_INT2IE):
+    case (MC_INTCON3_INT3IE):
+    case (MC_INTCON3_INT1IP):
+    case (MC_INTCON3_INT2IP):
+    case (MC_PIR1):
+    case (MC_PIR2):
+    case (MC_PIR3):
+    case (MC_PIR4):
+    case (MC_PIR5):
+    case (MC_PIE1_TMR1IE):
+	case (MC_PIE1_TMR2IE):
+	case (MC_PIE1_TMR1GIE):
+	case (MC_PIE1_SSPIE):
+	case (MC_PIE1_TX1IE):
+	case (MC_PIE1_RC1IE):
+	case (MC_PIE1_ADIE):
+	case (MC_PIE1_PSPIE):
+        case (MC_PIE2_TMR3GIE):
+	case (MC_PIE2_TMR3IE):
+	case (MC_PIE2_HLVDIE):
+	case (MC_PIE2_BCLIE):
+	case (MC_PIE2_OSCFIE):
+	case (MC_PIE3_CCP1IE):
+	case (MC_PIE3_CCP2IE):
+	case (MC_PIE3_CTMUIE):
+	case (MC_PIE3_TX2IE):
+	case (MC_PIE3_RC2IE):
+	case (MC_PIE4_CCP3IE):
+	case (MC_PIE4_CCP4IE):
+	case (MC_PIE4_CCP5IE):
+	case (MC_PIE4_CMP1IE):
+	case (MC_PIE4_CCP2IE):
+	case (MC_PIE4_EEIE):
+	case (MC_PIE4_TMR4IE):
+	case (MC_PIE5_RXB0IE):
+	case (MC_PIE5_RXB1IE):
+	case (MC_PIE5_TXB0IE):
+	case (MC_PIE5_TXB1IE):
+	case (MC_PIE5_TXB2IE):
+	case (MC_PIE5_ERRIE):
+	case (MC_PIE5_WAKIE):
+	case (MC_PIE5_IRXIE):
+        case (MC_IPR1_TMR1IP):
+	case (MC_IPR1_TMR2IP):
+	case (MC_IPR1_TMR1GIP):
+	case (MC_IPR1_SSPIP):
+	case (MC_IPR1_TX1IP):
+	case (MC_IPR1_RC1IP):
+	case (MC_IPR1_ADIP):
+	case (MC_IPR1_PSPIP):
+	case (MC_IPR2_TMR3GIP):
+	case (MC_IPR2_TMR3IP):
+	case (MC_IPR2_HLVDIP):
+	case (MC_IPR2_BCLIP ):
+	case (MC_IPR2_OSCFIP):
+	case (MC_IPR3_CCP1IP):
+	case (MC_IPR3_CCP2IP):
+	case (MC_IPR3_CTMUIP):
+	case (MC_IPR3_TX2IP):
+	case (MC_IPR3_RC2IP):
+	case (MC_IPR4_CCP3IP):
+	case (MC_IPR4_CCP4IP):
+	case (MC_IPR4_CCP5IP):
+	case (MC_IPR4_CMP1IP):
+	case (MC_IPR4_CMP2IP):
+	case (MC_IPR4_EEIP):
+	case (MC_IPR4_TMR4IP):
+	case (MC_IPR5_RXB0IP):
+	case (MC_IPR5_RXB1IP):
+	case (MC_IPR5_TXB0IP):
+	case (MC_IPR5_TXB1IP):
+	case (MC_IPR5_TXB2IP):
+	case (MC_IPR5_ERRIP):
+	case (MC_IPR5_WAKIP):
+	case (MC_IPR5_IRXIP):
+	case (MC_RCON_NOT_BOR):
+	case (MC_RCON_NOT_POR):
+	case (MC_RCON_NOT_PD):
+	case (MC_RCON_NOT_TO):
+	case (MC_RCON_NOT_RI):
+	case (MC_RCON_NOT_CM):
+	case (MC_RCON_SBOREN):
+	case (MC_RCON_IPEN):
+

@@ -1,0 +1,61 @@
+//Joseph M. Rondinelli
+
+#define SW1_PIN 6
+#define LED1_PIN 10
+#define MSEC_SAMPLE 1
+
+enum {yellowLED_OFF, yellowLED_ON};
+
+boolean isSwPressed, prevIsSwPressed, isSwJustReleased, isSwJustPressed;
+int state = yellowLED_OFF, prevState = !state;
+boolean isNewState;
+
+void setup() {
+  pinMode(SW1_PIN, INPUT_PULLUP);
+  pinMode(LED1_PIN, OUTPUT);  digitalWrite(LED1_PIN, LOW);
+  Serial.begin(9600);
+}
+
+void loop() {
+  prevIsSwPressed = isSwPressed;
+  isSwPressed = !digitalRead(SW1_PIN);
+  isSwJustPressed = (isSwPressed && !prevIsSwPressed);
+  isSwJustReleased = (!isSwPressed && prevIsSwPressed);
+  isNewState = (state != prevState);
+  prevState = state;
+
+  switch (state) {
+
+    case yellowLED_OFF:
+      // Entry housekeeping
+      if (isNewState) {
+        Serial.println("led_state: yellowLED_OFF");
+      }
+
+      // State business
+      digitalWrite(LED1_PIN, LOW);
+
+      // Exit condition and housekeeping
+      if (isSwJustPressed) {
+        state = yellowLED_ON;
+      }
+      break;
+
+    case yellowLED_ON:
+      // Entry housekeeping
+      if (isNewState) {
+        Serial.println("led_state: yellowLED_ON");
+      }
+
+      // State business
+      digitalWrite(LED1_PIN, HIGH);
+
+      // Exit condition and housekeeping
+      if (isSwJustReleased) {
+        state = yellowLED_OFF;
+      }
+      break;
+    default: state = yellowLED_OFF;
+  }
+  delay(MSEC_SAMPLE);
+}
